@@ -9,74 +9,91 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.teal,
+        backgroundColor: Colors.blue[700],
         body: SafeArea(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            CircleAvatar(
-              radius: 50.0,
-              backgroundImage: AssetImage('images/angela.jpg'),
-            ),
-            Text(
-              'Angela Yu',
-              style: TextStyle(
-                fontFamily: 'Pacifico',
-                fontSize: 40.0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              CircleAvatar(
+                radius: 55,
+                backgroundImage: AssetImage('images/me.jpg'),
+              ),
+              Text(
+                'Rabin Zaxiya',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 40,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'Pro Gamer',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20,
+                  color: Colors.blue.shade100,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+                width: 130,
+                child: Divider(
+                  color: Colors.blue.shade100,
+                ),
+              ),
+              Card(
                 color: Colors.white,
-                fontWeight: FontWeight.bold,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                child: Padding(
+                    padding: EdgeInsets.all(0),
+                    child: ListTile(
+                      leading: Icon(
+                        Icons.phone,
+                        color: Colors.blue.shade700,
+                      ),
+                      title: Text(
+                        '+977 9841040300',
+                        style: TextStyle(
+                          color: Colors.blue.shade800,
+                          fontFamily: 'Source Sans Pro',
+                          fontSize: 20,
+                        ),
+                      ),
+                    )),
               ),
-            ),
-            Text(
-              'FLUTTER DEVELOPER',
-              style: TextStyle(
-                fontFamily: 'Source Sans Pro',
-                color: Colors.teal.shade100,
-                fontSize: 20.0,
-                letterSpacing: 2.5,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(
-              height: 20.0,
-              width: 150.0,
-              child: Divider(
-                color: Colors.teal.shade100,
-              ),
-            ),
-            Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    '+44 123 456 789',
-                    style: TextStyle(
-                      color: Colors.teal.shade900,
-                      fontFamily: 'Source Sans Pro',
-                      fontSize: 20.0,
+              Card(
+                color: Colors.white,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                child: Padding(
+                  padding: EdgeInsets.all(0),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.blue.shade700,
+                    ),
+                    title: Text(
+                      'drarabin@gmail.com',
+                      style: TextStyle(
+                        fontFamily: 'Source Sans Pro',
+                        fontSize: 20,
+                        color: Colors.blue.shade800,
+                      ),
                     ),
                   ),
-                )),
-            Card(
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.email,
-                    color: Colors.teal,
-                  ),
-                  title: Text(
-                    'angela@email.com',
-                    style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.teal.shade900,
-                        fontFamily: 'Source Sans Pro'),
-                  ),
-                ))
-          ],
-        )),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
